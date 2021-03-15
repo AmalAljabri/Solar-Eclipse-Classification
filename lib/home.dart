@@ -90,15 +90,17 @@ class _HomeState extends State<Home> {
               })
         ],
       ),
+       
       backgroundColor: Color(0xFF0d0e1f),
-      body: Container(
+      body:  new SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 15),
+         
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 1),
+            SizedBox(height: 0),
             Text(
-              '\n        Solar Eclipse\n        Classification',
+              '\n         Solar Eclipse',
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Color(0xFFf4bb3a),
@@ -106,16 +108,16 @@ class _HomeState extends State<Home> {
                   fontSize: 33),
             ),
             SizedBox(
-              height: 40,
+              height: 10,
             ),
             Center(
               child: _loading
                   ? Container(
-                      width: 400,
+                      width: 300,
                       child: Column(
                         children: <Widget>[
                           Image.asset('assets/solar eclipse.png'),
-                          SizedBox(height: 50),
+                          SizedBox(height: 40),
                         ],
                       ),
                     )
@@ -127,7 +129,7 @@ class _HomeState extends State<Home> {
                           child: Image.file(_image),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         _output != null
                             ? Container(
@@ -146,12 +148,12 @@ class _HomeState extends State<Home> {
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 18),
+                  SizedBox(height: 5),
                   RaisedButton.icon(
                     onPressed: pickImage,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 15),
                     label: Text(
                       'Take a Photo',
                       style: TextStyle(
@@ -171,7 +173,7 @@ class _HomeState extends State<Home> {
                     onPressed: pickGalleryImage,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 15),
                     label: Text(
                       'Photo Library',
                       style: TextStyle(
