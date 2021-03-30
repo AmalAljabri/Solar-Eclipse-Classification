@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
   classifyImage(File image) async {
     var output = await Tflite.runModelOnImage(
         path: image.path,
-        numResults: 2,
+        numResults: 3,
         threshold: 0.5,
         imageMean: 127.5,
         imageStd: 127.5);
